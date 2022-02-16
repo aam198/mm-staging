@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.828.0.min.js"></script>
+   
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+
+    <div class="container_grid">
+
+      <header id="header">
+        <div class="container" id="headerContainer">
+          <div class="header-login">
+
+             <img class="profile-img" src="https://images.unsplash.com/photo-1488229297570-58520851e868?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvZGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
+             <div class="login-title">User</div>
+            </div>
+          </div>
+     </header>
+        
+        <aside>
+          <h2><i class="fab fa-aws" aria-hidden="true"></i> MM Services </h2>
+          
+          <a href="../index.html"  id="avail">
+            <i class="fab fa-buffer" aria-hidden="true"></i>
+            Available Files
+          </a>
+          
+          <a href="./encode.html"  id="encode">
+            <i class="fa fa-upload" aria-hidden="true"></i>
+            Encode Video Files
+          </a>
+          <a href="./s3.html" id="s3">
+            <i class="fas fa-photo-video" aria-hidden="true"></i>
+           S3 Bucket
+          </a>
+          <a href="./search.html" id="search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            Search Archive 
+          </a>
+          <a href="./archive.html" class="active"  id="archive">
+            <i class="fas fa-archive" aria-hidden="true"></i>
+            Upload to Archive 
+          </a>
+          
+          <div class="description">
+            <p><i class="fas fa-info-circle"></i>Upload files into AWS Deep Glacier storage. Users can archive their local files for safe storage and backup. Just select the location, in which the files will live, and the files will be archived to that location.</p></div>
+          
+        </aside>
+        
+        <section>
+          <div class="main-area">
+            <div class="card">
+
+              <div class="card-header">
+                
+                <label class="checkbox-container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <h2 class="file-location">File Location</h2>
+                <h2 class="file-name">File Name</h2>
+                <h2 class="file-type">File Type</h2>
+                <h2 class="file-size">File Size</h2>
+                <div class="remove-select"></div>
+              </div>
+
+              <div class="card-content">
+                <p>Browse to Folder location...</p>
+
+            
+                <div id="fileDetails" class="file-details">
+
+                </div>                
+
+                <div class="drag-area" id="drop-area">
+                  <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <h2 id="select-file"> Drag & Drop to Upload File(s)</h2>
+                               <span>or</span>
+                      <button class="btn upload" id="browse-btn" onchange="handleFiles(this.files)">Browse Files</button>
+        
+                      <input type = "file" id="fileElem" multiple accept ="image/*" onchange="handleFiles(this.files)" hidden>
+        
+                      <progress type="range" class="progress" id="progress-bar" min="0" max="100" step="0.1" value="0"> </progress>
+
+                  </div>
+              </div>
+              
+            </div>
+            
+          </div>
+
+            <div class="continue-container">
+              <button class="btn" id="nextBtn" disabled >Upload File(s)</button>
+          
+          
+              <div id="gallery"></div>
+          
+              <div id ="myModal" class="modal">
+                  <div class="modal-box">
+                    <h2>Upload to Archive?</h2>
+                    <span class="close"><i class="fas fa-times"></i></span>
+                    <div class="content">
+                           Are you sure you would like to upload file(s) to the Archive, AWS Deep Glacier Storage?
+                       </div>
+                   <div class="navigation">
+                       <button class="btn-sm" id="upload-s3">Yes, Upload!</button>
+                      <button class="btn-sm remove-btn" id="backBtn">No, Take me back</button>
+                   </div>    
+          
+                  </div>
+                 </div>
+              </div>
+
+            <!-- <div class="add-button">
+              <div id="custom-text"></div>
+              
+              <label class="btn button" for="directory" role="button">Add Folder</label>   
+
+              <label class="btn button" for="file" rol="button" id="addFile">Select File</label>
+          
+              <input type="file" id="real-file" hidden="hidden" />
+
+              <input class="hidden" type="file" id="directory" name="directory" directory webkitdirectory></input>
+              
+            </div> -->
+
+          
+
+
+        </section>
+        
+    </div>
+        <!-- fas fa-history -->
+    <script src="../scripts/archive.js"></script>
+</body>
+</html>

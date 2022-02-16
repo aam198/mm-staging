@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM Services</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.828.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+
+  <div class="container_grid">
+
+    <header id="header">
+      <div class="container" id="headerContainer">
+
+          <div class="header-login">
+
+             <img class="profile-img" src="https://images.unsplash.com/photo-1488229297570-58520851e868?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvZGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
+             <div class="login-title">User</div>
+            </div>
+          </div>
+     </header>
+        
+        <aside>
+          <h2><i class="fab fa-aws" aria-hidden="true"></i> MM Services </h2>
+          
+          <a href="../index.html"  id="avail">
+            <i class="fab fa-buffer" aria-hidden="true"></i>
+            Available Files
+          </a>
+          
+          <a href="./encode.html"  id="encode">
+            <i class="fa fa-upload" aria-hidden="true"></i>
+            Encode Video Files
+          </a>
+          <a href="./s3.html" id="s3">
+            <i class="fas fa-photo-video" aria-hidden="true"></i>
+           S3 Bucket
+          </a>
+          <a href="./search.html" class="active" id="search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            Search Archive 
+          </a>
+          <a href="./archive.html"  id="archive">
+            <i class="fas fa-archive" aria-hidden="true"></i>
+            Upload to Archive 
+          </a>
+
+          <div class="description">
+            <p><i class="fas fa-info-circle"></i>The user can search the archive for files by typing a file name in the search bar or navigating to the specific folder.</p>
+            <p><strong>12-Hour Restore</strong>: for an immediate need (i.e. impacting students in live lessons). </p>
+             <p> <strong>48-Hour Restore</strong>: anything else. 
+            </p></div>
+          
+        </aside>
+        
+        <section>
+          <div class="main-area">
+            <div class="card">
+              
+              <div class="card-search">
+                <div class="search-bar">
+                  <input class="search" type="text" placeholder="Search files by prefix">
+                </div>
+              </div>
+              
+              <div class="card-header">
+                <label class="checkbox-container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <h2 class="file-location-check">File Location</h2>
+                <h2 class="file-name-check">File Name </h2>
+                <h2 class="file-type-check">Type</h2>
+                <h2 class="file-size-check">Size</h2>
+                <h2 class="status-check">Status</h2>
+              </div>
+
+              <div class="card-content">
+              </div>
+            </div>
+        
+          </div>
+          
+        <div class="continue-container">
+          <button class="btn" id="restore-12">12-Hour Restore</button>
+          <button class="btn" id="restore-48">48-Hour Restore</button>
+        </div>
+     
+
+          
+    </section>
+        
+    </div>
+        <!-- fas fa-history -->
+    
+</body>
+</html>

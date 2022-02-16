@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM Services</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.828.0.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+  <div class="container_grid">
+  
+    <header id="header">
+      <div class="container" id="headerContainer">
+          <div class="header-login">
+             <img class="profile-img" src="https://images.unsplash.com/photo-1488229297570-58520851e868?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvZGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
+             <div class="login-title" id="userLogin">User</div>
+            </div>
+     </header>
+  
+     
+
+  <nav id="nav">
+     <aside id="sidenav-open">
+          <h2><i class="fab fa-aws" aria-hidden="true"></i> MM Services </h2>
+          
+          <a href="/index.html" class ="active" id="avail">
+            <i class="fab fa-buffer" aria-hidden="true"></i>
+            Available Files
+          </a>
+          <a href="demo/encode.html" id="encode">
+            <i class="fa fa-upload" aria-hidden="true"></i>
+            Encode Video Files
+          </a>
+          <a href="demo/s3.html" id="s3">
+            <i class="fas fa-photo-video" aria-hidden="true"></i>
+           S3 Bucket
+          </a>
+          <a href="demo/search.html" id="search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            Search Archive 
+          </a>
+          <a href="demo/archive.html" id="archive">
+            <i class="fas fa-archive" aria-hidden="true"></i>
+            Upload to Archive 
+          </a>
+          
+          <div class="description">
+            <p><i class="fas fa-info-circle"></i>List of all the files that have been restored from the Archive (AWS Deep Glacier) and are now available to download to your local machine. These files were copied from their original location and are available for 30 days.</p>
+            <p>Please refresh the page if files do not show right away.</p>
+          </div>
+          
+      </aside>
+    </nav>
+    
+      <section>
+        <div class="main-area">
+          <div class="card">
+            <div class="card-header">
+              
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <h2 class="file-location-check">File Location</h2>
+              <h2 class="file-name-check">File Name </h2>
+              <h2 class="file-type-check">File Type</h2>
+              <h2 class="file-size-check">File Size</h2>
+              <h2 class="status-check">Status</h2>
+            </div>
+
+            <div class="card-content">
+            </div>
+          </div>
+          </div>
+        <div class="continue-container">
+          <button class= "dl-button btn">
+            Download File(s)
+          </button>
+        </div>
+      </section>
+    </div>
+          
+      
+ 
+ 
+  
+       
+  
+</body>
+
+
+</html>
