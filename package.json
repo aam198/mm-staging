@@ -4,24 +4,27 @@
   "description": "> Documentation is currently under construction. :)  ## Contribute To contribute, Fork!",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server",
+    "start": "node index",
+    "dev": "nodemon index",
+    "build": "esbuild src/app.js --bundle --minify --define:global=window --outfile=dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aam198/mm-staging.git"
   },
-  "author": "DevChemist",
+  "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/aam198/mm-staging/issues"
   },
   "homepage": "https://github.com/aam198/mm-staging#readme",
   "dependencies": {
+    "aws-amplify": "^4.3.14",
     "express": "^4.17.3"
   },
   "devDependencies": {
+    "esbuild": "^0.13.15",
     "nodemon": "^2.0.15"
   }
 }

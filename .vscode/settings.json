@@ -10,9 +10,11 @@
   },
   "liveServer.settings.port": 5502,
   "cSpell.ignoreWords": [
+    "awsconfig",
     "checkmark",
     "cpath",
     "csvg",
+    "signin",
     "unhighlight"
   ]
 }

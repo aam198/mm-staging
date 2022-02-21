@@ -1,0 +1,13 @@
+{
+  "resourceName": "mmservicesstaging",
+  "policyUUID": "0f41e494",
+  "bucketName": "mm-services-stagingapp164031-staging",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
